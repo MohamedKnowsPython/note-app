@@ -1,4 +1,4 @@
-### notes
+### note-app
 
 notes
 

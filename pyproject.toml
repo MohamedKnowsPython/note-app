@@ -1,7 +1,7 @@
 [project]
 name = "note_app"
 authors = [
-    { name = "cicd", email = "test@gmail.com"}
+    { name = "tester", email = "alisanmolhamed@gmail.com"}
 ]
 description = "notes"
 requires-python = ">=3.10"

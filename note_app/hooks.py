@@ -1,8 +1,8 @@
 app_name = "note_app"
-app_title = "notes"
-app_publisher = "cicd"
+app_title = "note-app"
+app_publisher = "tester"
 app_description = "notes"
-app_email = "test@gmail.com"
+app_email = "alisanmolhamed@gmail.com"
 app_license = "mit"
 
 # Apps
@@ -15,7 +15,7 @@ app_license = "mit"
 # 	{
 # 		"name": "note_app",
 # 		"logo": "/assets/note_app/logo.png",
-# 		"title": "notes",
+# 		"title": "note-app",
 # 		"route": "/note_app",
 # 		"has_permission": "note_app.api.permission.has_app_permission"
 # 	}
