@@ -1,6 +1,3 @@
-import pytest
-from frappe.tests.utils import FrappeTestCase
-
 import frappe
 from frappe.tests.utils import FrappeTestCase
 
@@ -12,7 +9,6 @@ class TestMyNotes(FrappeTestCase):
         frappe.set_user("Administrator")
 
     def test_create_my_note(self):
-        """Creating a My Notes document should work"""
         note = frappe.get_doc({
             "doctype": "My Notes",
             "title": "Unit Test Note",
@@ -29,7 +25,6 @@ class TestMyNotes(FrappeTestCase):
         note.delete()
 
     def test_list_notes_api(self):
-        """create_note + list_notes should create and return the note"""
         from note_app.api.notes import create_note, list_notes
 
         result = create_note(
