@@ -1,6 +1,9 @@
-import frappe
 import pytest
 from frappe.tests.utils import FrappeTestCase
+
+import frappe
+from frappe.tests.utils import FrappeTestCase
+
 
 class TestMyNotes(FrappeTestCase):
     """Unit tests for My Notes DocType and API"""
@@ -9,30 +12,35 @@ class TestMyNotes(FrappeTestCase):
         frappe.set_user("Administrator")
 
     def test_create_my_note(self):
-        """
-        Test: Creating a new My Notes document
-        Should successfully insert a note with title, content and priority
-        """
+        """Creating a My Notes document should work"""
         note = frappe.get_doc({
             "doctype": "My Notes",
             "title": "Unit Test Note",
             "content": "Created by unit test",
             "priority": "High",
-            "status": "Open"
+            "status": "Open",
         }).insert()
 
-        assert note.title == "Unit Test Note"
-        assert note.priority == "High"
-        assert note.name is not None
+        self.assertEqual(note.title, "Unit Test Note")
+        self.assertEqual(note.priority, "High")
+        self.assertEqual(note.status, "Open")
+        self.assertTrue(note.name)
+
+        note.delete()
 
     def test_list_notes_api(self):
-        """
-        Test: create_note + list_notes API methods
-        Should create a note and be able to retrieve it via list_notes
-        """
+        """create_note + list_notes should create and return the note"""
         from note_app.api.notes import create_note, list_notes
 
-        create_note(title="API Unit Test", content="Hello from unit test", priority="Medium")
-        notes = list_notes(status="Open")
+        result = create_note(
+            title="API Unit Test",
+            content="Hello from unit test",
+            priority="Medium",
+        )
+        self.assertEqual(result["title"], "API Unit Test")
+        self.assertEqual(result["status"], "Open")
 
-        assert any(n.get("title") == "API Unit Test" for n in notes)
+        notes = list_notes(status="Open")
+        self.assertTrue(any(n.get("title") == "API Unit Test" for n in notes))
+
+        frappe.delete_doc("My Notes", result["name"])
