@@ -1,0 +1,15 @@
+
+Running 1 test using 1 worker
+
+[1/1] [api] › tests/api/notes-api.spec.ts:6:7 › My Notes API Chaining › Create → List → Filter by Status
+[api] › tests/api/notes-api.spec.ts:6:7 › My Notes API Chaining › Create → List → Filter by Status
+Logged in successfully
+
+Created note: e375h011gv
+
+  1 passed (2.7s)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

@@ -1,0 +1,10 @@
+
+Running 1 test using 1 worker
+
+[1/1] [api] › tests/api/notes-api.spec.ts:6:7 › My Notes API Chaining › Create → List → Filter by Status
+[api] › tests/api/notes-api.spec.ts:6:7 › My Notes API Chaining › Create → List → Filter by Status
+Logged in successfully
+
+Created note: 30efsqcvki
+
+  1 passed (2.9s)

@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-02_12-24-37",
+  "unit": "PASSED",
+  "unit_time": 3,
+  "api": "PASSED",
+  "api_time": 6,
+  "e2e": "PASSED",
+  "e2e_time": 23,
+  "total_time": 32,
+  "overall": "PASSED"
+}

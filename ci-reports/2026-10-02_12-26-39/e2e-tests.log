@@ -1,0 +1,33 @@
+
+Running 1 test using 1 worker
+
+[1/1] [e2e] › tests/e2e/notes-ui.spec.ts:14:7 › My Notes UI E2E › Create a My Note from UI
+[e2e] › tests/e2e/notes-ui.spec.ts:14:7 › My Notes UI E2E › Create a My Note from UI
+STEP 1: Logging in as Administrator
+
+STEP 2: Searching for My Notes via Awesome Bar
+
+STEP 2: Successfully landed on My Notes list
+
+STEP 3: Clicking "Add My Notes" button
+
+STEP 3: New My Notes form opened
+
+STEP 4: Filling Title field
+
+STEP 5: Filling Content field
+
+STEP 6: Setting Priority to High
+
+STEP 7: Clicking Save button
+
+STEP 8: Note saved successfully
+
+✅ E2E Test completed successfully
+
+  1 passed (21.4s)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

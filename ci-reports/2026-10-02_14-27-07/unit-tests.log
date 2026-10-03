@@ -1,0 +1,32 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.4, pytest-9.1.1, pluggy-1.6.0 -- /home/mohamedtibs/frappe-bench/env/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.14.4', 'Platform': 'Linux-7.0.0-34-generic-x86_64-with-glibc2.43', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'metadata': '3.1.1', 'frappe': '0.2.5', 'html': '4.2.0'}}
+rootdir: /home/mohamedtibs/frappe-bench/apps/note_app
+configfile: pytest.ini
+plugins: metadata-3.1.1, frappe-0.2.5, html-4.2.0
+collecting ... collected 2 items
+
+apps/note_app/note_app/tests/test_my_notes.py::TestMyNotes::test_create_my_note ERROR [ 50%]
+apps/note_app/note_app/tests/test_my_notes.py::TestMyNotes::test_list_notes_api ERROR [100%]
+
+==================================== ERRORS ====================================
+______________ ERROR at setup of TestMyNotes.test_create_my_note _______________
+env/lib/python3.14/site-packages/pytest_frappe/fixtures.py:59: in db_instance
+    selected_test_site = select_test_site(request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+env/lib/python3.14/site-packages/pytest_frappe/fixtures.py:35: in select_test_site
+    raise Exception("Please specify a test site using the --test-site option")
+E   Exception: Please specify a test site using the --test-site option
+______________ ERROR at setup of TestMyNotes.test_list_notes_api _______________
+env/lib/python3.14/site-packages/pytest_frappe/fixtures.py:59: in db_instance
+    selected_test_site = select_test_site(request)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+env/lib/python3.14/site-packages/pytest_frappe/fixtures.py:35: in select_test_site
+    raise Exception("Please specify a test site using the --test-site option")
+E   Exception: Please specify a test site using the --test-site option
+- Generated html report: file:///home/mohamedtibs/frappe-bench/apps/note_app/ci-reports/2026-10-02_14-27-07/unit-report.html -
+=========================== short test summary info ============================
+ERROR apps/note_app/note_app/tests/test_my_notes.py::TestMyNotes::test_create_my_note - Exception: Please specify a test site using the --test-site option
+ERROR apps/note_app/note_app/tests/test_my_notes.py::TestMyNotes::test_list_notes_api - Exception: Please specify a test site using the --test-site option
+============================== 2 errors in 0.10s ===============================
