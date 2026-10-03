@@ -4,11 +4,13 @@ name: CI
 on:
   push:
     branches:
+      - main
       - develop
   pull_request:
+  workflow_dispatch:
 
 concurrency:
-  group: develop-note_app-${{ github.event.number }}
+  group: note_app-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
